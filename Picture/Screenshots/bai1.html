@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+        body {
+            padding: 5px;
+        }
+        #header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+
+        #logo {
+            width: 150px;
+            height: 50px;
+        }
+
+        #search {
+            height: 30px;
+            width: 20%;
+            padding: 5px;
+        }
+
+        #cart {
+            width: 150px;
+            padding: 5px;
+            background-color: #FF3399;
+            color: white;
+            text-align: center;
+        }
+
+        #cart:hover {
+            background-color: yellow;
+            color: red;
+        }
+
+        #menu ul {
+            background-color: black;
+            list-style-type: none;
+            text-align: center;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        #menu li {
+            display: inline-block;
+            color: white;
+            width: auto;
+            height: 50px;
+            width: 100%;
+            line-height: 50px;
+            position: relative;
+        }
+
+        #menu li:hover {
+            background-color: #FF3399;
+        }
+
+        #menu a {
+            color: white;
+			text-decoration: none;
+			display: block;
+		}
+
+        /* #menu a:hover {			
+			color: black;
+		} */
+
+        #menu .sub-menu {
+			position: absolute;
+			display: none;
+		}
+		#menu li:hover .sub-menu {
+			display: block;
+            width: 100%;
+		}
+
+        .sub-menu li {
+            border-bottom: 1px solid white;
+        }
+		
+    </style>
+</head>
+<body>
+    <div id="header">
+        <img src="logo.png" alt="logo" id="logo">
+        
+        <input type="text" id="search" placeholder="Search">
+
+        <div id="cart">
+            0 Items
+        </div>
+    </div>
+    <div id="menu">
+        <ul class="cha">
+            <li class="con">
+                <a>Home</a>
+                <ul class="sub-menu">
+					<li><a href="">WordPress</a></li>
+					<li><a href="">SEO</a></li>
+					<li><a href="">Hosting</a></li>
+				</ul>
+            </li>
+            <li class="con"><a>Women</a></li>
+            <li class="con"><a>Men</a></li>
+            <li class="con"><a>Jwely</a></li>
+            <li class="con"><a>Boots</a></li>
+            <li class="con"><a>Clothing</a></li>
+            <li class="con"><a>Jeans</a></li>
+            <li class="con"><a>Accsoir</a></li>
+            <li class="con"><a>Blog</a></li>
+        </ul>
+    </div>
+    <div id="content"></div>
+</body>
+</html>

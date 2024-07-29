@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Minh họa menu ngang</title>
+<meta charset="utf-8">
+<style>
+	*{
+		padding:0px;
+		margin:0px;
+		box-sizing:border-box;
+	}
+	nav{
+		width:100%;
+		background-color:blue;
+	}
+	ul{
+		display:grid;
+		grid-template-columns:auto auto auto auto auto;
+		list-style-type:none;
+		height:50px;
+		justify-content:space-between;
+	}
+	ul a{
+		text-decoration:none;
+		color:white;
+		line-height:50px;
+		display:inline-block;
+		width:150px;
+		text-align:center;
+	}
+	ul a:hover{
+		background-color:red;
+	}
+	.cha{
+		/*position:relative;*/
+	}
+	.con{
+		position:absolute;
+		background-color:red;
+		left:0px;
+		width:600px;
+		display:none;
+	}
+	.cha:hover .con{
+		display:grid;
+	}
+	.con a:hover{
+		background-color:yellow;
+		color:red;
+	}	
+		
+	
+		
+</style>
+</head>
+<body>
+	<nav>
+		<ul>
+			<li><a href="#">Chính trị-xã hội</a></li>
+			<li class="cha"><a href="#">Thế giới</a>
+				<ul class="con">
+					<li><a href="#">Thư viện pháp luật</a></li>
+					<li><a href="#">Sống khỏe</a></li>
+					<li><a href="#">Pháp luật</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Nhịp sống trẻ</a></li>
+			<li><a href="#">Giáo dục</a></li>
+			<li><a href="#">Kinh tế</a></li>
+		</ul>
+	</nav>
+</body>
+</html>

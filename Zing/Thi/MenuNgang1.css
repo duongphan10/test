@@ -1,0 +1,49 @@
+@charset "utf-8";
+/* CSS Document */
+* {	
+			margin: 0;
+			padding: 0;
+		}
+		#header {
+			background: #E7B8B9;
+			height: 100px;
+		}
+		#menu {
+			background: #DC79C9;
+			height: 40px;
+		}
+		#main {
+			background: #40F75A;
+			height: 100px;
+			text-align: center;
+		}
+		#menu ul {
+			background: #F43B3E;
+			text-align: center;
+			list-style-type: none;
+		}
+		#menu li {
+			background: aqua;
+			height: 40px;
+			width: 100px;
+			line-height: 40px;
+			display: inline-block;
+			position: relative;
+			margin-left: -5px;
+			border-left: 1px solid #D3D3D3;
+		}
+		#menu li a {
+			text-decoration: none;
+			color: grey;
+			display: block;
+		}
+		#menu li:hover {
+			background: #7E6EE1;
+		}
+		#menu .sub {
+			display: none;
+			position: absolute;
+		}
+		#menu li:hover .sub {
+			display: block;
+		}

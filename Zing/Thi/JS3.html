@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+	<script>
+		function Tinh() {
+			var s = document.nhap.a.value;
+			var a = new Array();
+			a = s.split(" ");
+			window.document.nhap.b.value = a.length;
+			window.document.nhap.c.value = s.length;
+		}
+	</script>
+
+<body>
+	<form name="nhap">
+		<table border="1" cellspacing="0" cellpadding="2">
+			<tr>
+				<td>Nhap chuoi: </td>
+				<td><input type="text" name="a"></td>
+			</tr>
+			<tr>
+				<td>So tu: </td>
+				<td><input type="text" name="b" readonly></td>
+			</tr>
+			<tr>
+				<td>So ky tu: </td>
+				<td><input type="text" name="c"></td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center">
+					<input type="button" value="Tinh" onClick="Tinh();">
+					<input type="reset" value="Xoa">
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
