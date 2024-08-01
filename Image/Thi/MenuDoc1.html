@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+	<style>
+		#header {
+			background: #DFA8A9;
+			height: 50px;
+			width: 100%;
+			text-align: center;
+		}
+		#main {
+			background: #DBC8C8;
+			height: 200px;
+		}
+		#menu {
+			float: left;
+			height: 200px;
+			width: 20%;
+			background: #FFFBA1;
+		}
+		#right {
+			float: right;
+			height: 200px;
+			width: 80%;
+			background: #C0090C;
+		}
+		#footer {
+			height: 100px;
+			background: #8ED376;
+		}
+		#menu ul {
+			background: #E06CD1;
+			padding: 0;
+			list-style-type: none;
+			width: 100%;
+			margin-top: 0;
+			text-align: left;
+		}
+		#menu li {
+			width: auto;
+			height: 40px;
+			line-height: 40px;
+			border-bottom: 1px solid #D8D8D8;
+			padding: 0 1em;
+		}
+		#menu li a {
+			color: black;
+			text-decoration: none;
+			display: block;
+		}
+		#menu li:hover {
+			background: #E9BCD8;
+		}
+		#menu ul li {
+			position: relative;
+		}
+		#menu .sub {
+			position: absolute;
+			width: 100%;
+			left: 100%;
+			top: 0;
+			display: none;
+		}
+		#menu li:hover .sub {
+			display: block;
+		}
+	</style>
+<body>
+	<div id="div1">
+		<div id="header"> Header
+		</div>
+		<div id="main">
+			<div id="menu">
+				<ul>
+					<li><a href="#">Trang Chu</a></li>
+					<li><a href="#">Tin Tuc</a>
+						<ul class="sub">
+							<li><a href="#">WordPress</a></li>
+							<li><a href="#">SEO</a></li>
+							<li><a href="#">Hosting</a></li>
+						</ul>
+					</li>
+					<li><a href="#">San Pham</a></li>
+					<li><a href="#">Lien He</a></li>
+				</ul>
+			</div>
+			<div id="right">
+				Right
+			</div>
+		</div>
+		<div id="footer">
+			Footer
+		</div>
+	</div> 
+</body>
+</html>

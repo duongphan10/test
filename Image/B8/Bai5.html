@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <script>
+        function check() {
+            
+            var s = window.document.nhap.a.value;
+            var sum = 0;
+            window.document.nhap.b.value = sum;
+            if (s[0]!=" ") sum++;
+            for (var i=0;i<s.length-1;i++) {
+                if (s[i]==" " && s[i+1]!=" ") sum++
+            }
+            window.document.nhap.b.value = sum;
+        }
+        function Xuat() {
+            var s = window.document.nhap.a.value;
+            s = s.trim();
+            var x =0;
+            while (x<s.length-1) {
+                if (s[x]==" " && s[x+1]==" ") {
+                    s = s.replace('  ',' ')
+                }
+                else 
+                    x++;
+            }
+            s = s[0].toUpperCase() + s.slice(1);
+            window.document.nhap.c.value = s;
+        }
+    </script>
+<body>
+    <form action="" name="nhap">
+        <table border="1" cellpadding="2">
+            <tr>
+                <td colspan="2">Bài tập về chuỗi</td>
+            </tr>
+            <tr>
+                <td>Câu nhập vào:</td>
+                <td>
+                    <input type="text" name="a">
+                </td>
+            </tr>
+            <tr>
+                <td>Số từ:</td>
+                <td>
+                    <input type="number" name="b">
+                </td>
+            </tr>
+            <tr>
+                <td>Câu đã chuẩn hóa:</td>
+                <td>
+                    <input type="text" name="c">
+                </td>
+            </tr>
+            <tr>
+                <td align="center"><input type="button" value="Đếm từ" onclick="check();"></td>
+                <td align="center"><input type="button" value="Xuất câu" onclick="Xuat();"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

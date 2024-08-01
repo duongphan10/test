@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+	<script>
+		function tong() {
+			var s1 = window.document.nhap.a.value;
+			var s2 =window.document.nhap.b.value;
+			if (s1=="" || s2 == "") {
+				window.alert("Nhap du thong tin!")
+			}
+			else {	
+				var x = parseInt(s1);
+				var y = parseInt(s2);
+				var z = x+y;
+				window.document.nhap.c.value = z;
+			}
+		}
+	</script>
+
+<body>
+	<form action="" name="nhap">
+		So 1 <input type="text" name="a"> <br>
+		So 2 <input type="text" name="b"> <br>
+		Tong <input type="text" name="c"> <br>
+		<input type="button" value="Tong so" onClick="tong();">
+		<input type="reset" value="Xoa">
+	</form>
+</body>
+</html>

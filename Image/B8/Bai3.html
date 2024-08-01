@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var str = window.prompt("Nhap vao 1 mang(cac phan tu cach nhau bang dau phay)");
+        var a  = new Array();
+        a = str.split(',');
+        document.writeln("Mang vua nhap la :  ");
+        
+        for(var i=0;i<a.length;i++){
+            document.write(a[i]+" ");
+            a[i]=parseInt(a[i]);
+        }
+        document.writeln("<br>");
+        var tong =0;
+        for(var i=0;i<a.length;i++){
+            tong = tong + a[i];
+        }
+        document.writeln("Tong day so vua nhap la :"+tong);
+        document.writeln("<br>Sap xep tang dan :");
+        for(var i=0;i<a.length;i++){
+            for(var j=i+1;j<a.length;j++)
+            if(a[i]>a[j]){
+                var tg = a[i];
+                    a[i] = a[j];
+                    a[j] = tg;
+            }
+        }
+        for(var i=0;i<a.length;i++){
+            document.write(a[i]+" ")
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>
