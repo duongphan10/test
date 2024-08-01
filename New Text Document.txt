@@ -1,0 +1,101 @@
+Dưới đây là một số câu lệnh JavaScript cơ bản để chèn giá trị vào phần tử HTML:
+
+Sử dụng innerHTML:
+
+javascript
+Sao chép mã
+document.getElementById("elementID").innerHTML = "Nội dung mới";
+Đây là cách phổ biến để chèn hoặc thay đổi nội dung HTML bên trong một phần tử có ID cụ thể.
+
+Sử dụng textContent:
+
+javascript
+Sao chép mã
+document.getElementById("elementID").textContent = "Nội dung mới";
+Cách này chỉ thay đổi nội dung văn bản của phần tử, không nhận các thẻ HTML.
+
+Sử dụng value (thường dùng cho các phần tử form như input hoặc textarea):
+
+javascript
+Sao chép mã
+document.getElementById("inputID").value = "Giá trị mới";
+Sử dụng setAttribute để thay đổi thuộc tính:
+
+javascript
+Sao chép mã
+document.getElementById("elementID").setAttribute("attributeName", "value");
+Ví dụ: để thay đổi thuộc tính src của một thẻ img, bạn có thể dùng:
+
+javascript
+Sao chép mã
+document.getElementById("imageID").setAttribute("src", "newImage.jpg");
+Sử dụng style để thay đổi CSS trực tiếp:
+
+javascript
+Sao chép mã
+document.getElementById("elementID").style.color = "blue";
+Bạn có thể thay đổi bất kỳ thuộc tính CSS nào bằng cách truy cập vào style của phần tử.
+
+Sử dụng appendChild để thêm phần tử con:
+
+javascript
+Sao chép mã
+var newElement = document.createElement("div");
+newElement.innerHTML = "Nội dung mới";
+document.getElementById("parentID").appendChild(newElement);
+Sử dụng insertAdjacentHTML để chèn HTML vào vị trí cụ thể:
+
+javascript
+Sao chép mã
+document.getElementById("elementID").insertAdjacentHTML("beforeend", "<p>Nội dung mới</p>");
+Các tùy chọn khác bao gồm "beforebegin", "afterbegin", và "afterend".
+
+Những cách này giúp bạn linh hoạt trong việc thao tác và thay đổi nội dung của trang web thông qua JavaScript.
+
+
+
+
+
+Ngoài việc sử dụng getElementById, bạn có thể sử dụng các phương pháp khác để chọn và thao tác với các phần tử trong DOM. Dưới đây là một số phương pháp phổ biến:
+
+getElementsByClassName: Chọn các phần tử dựa trên tên lớp (class).
+
+javascript
+Sao chép mã
+var elements = document.getElementsByClassName("className");
+// Truy cập phần tử đầu tiên
+elements[0].innerHTML = "Nội dung mới";
+getElementsByTagName: Chọn các phần tử dựa trên tên thẻ (tag).
+
+javascript
+Sao chép mã
+var elements = document.getElementsByTagName("tagName");
+// Truy cập phần tử đầu tiên
+elements[0].innerHTML = "Nội dung mới";
+querySelector: Chọn phần tử đầu tiên phù hợp với selector CSS được cung cấp.
+
+javascript
+Sao chép mã
+var element = document.querySelector(".className");
+element.innerHTML = "Nội dung mới";
+Bạn có thể sử dụng các selector như .className, #idName, tagName, hoặc các tổ hợp phức tạp hơn.
+
+querySelectorAll: Chọn tất cả các phần tử phù hợp với selector CSS được cung cấp.
+
+javascript
+Sao chép mã
+var elements = document.querySelectorAll(".className");
+// Truy cập phần tử đầu tiên
+elements[0].innerHTML = "Nội dung mới";
+Kết quả là một NodeList, tương tự như một mảng, có thể truy cập bằng chỉ số.
+
+getElementsByName: Chọn các phần tử dựa trên thuộc tính name.
+
+javascript
+Sao chép mã
+var elements = document.getElementsByName("nameAttribute");
+// Truy cập phần tử đầu tiên
+elements[0].value = "Giá trị mới";
+Phương pháp này thường được sử dụng cho các phần tử form như input hoặc select.
+
+Các phương pháp này cho phép bạn linh hoạt chọn các phần tử trong DOM dựa trên các tiêu chí khác nhau như tên lớp, tên thẻ, hoặc các selector phức tạp.
